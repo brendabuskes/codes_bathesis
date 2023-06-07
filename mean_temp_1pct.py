@@ -23,7 +23,7 @@ for file in glob.glob(path + "/*.nc"):
 # List that collects all the mean temperatures     
 global_temps = []
 
-# For every file in grbfiles, the function 'mean_temp' is going to calculate the mean temp
+# For every file in grbfiles, the function 'average_temp' is going to calculate the mean temp
 for filename in ncfiles:
     def average_temp(filename):
         # Open the .grb file as an xarray dataset

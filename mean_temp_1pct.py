@@ -14,17 +14,17 @@ import xarray as xr
 import numpy as np
 import glob
 
-# Make list of all the grb files in folder
-grbfiles = []
+# Make list of all the nc files in folder
+ncfiles = []
 path = r""
 for file in glob.glob(path + "/*.nc"):
-    grbfiles.append(file)
+    ncfiles.append(file)
     
 # List that collects all the mean temperatures     
 global_temps = []
 
 # For every file in grbfiles, the function 'mean_temp' is going to calculate the mean temp
-for filename in grbfiles:
+for filename in ncfiles:
     def average_temp(filename):
         # Open the .grb file as an xarray dataset
         ds = xr.open_dataset(filename, decode_cf=False)
